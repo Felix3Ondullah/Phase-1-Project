@@ -9,10 +9,8 @@ body{
 
 p{
     margin-bottom: 30px;
-    font-size: xx-large;
-}
-form{
-    margin-bottom: 10px;
+    font-size: large;
+    font-style: italic;
 }
 
 .container {
