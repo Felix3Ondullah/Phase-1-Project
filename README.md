@@ -1,18 +1,17 @@
 
-1. Project's Title
+# Project's Title
 Lyrics app
  
-2. Project Description
+# Project Description
 This lyrics app will enable the user to fetch/find any song lyrics at his convenience by either using a phone/laptop. The user will input either the name of the musician/the song or the lyrics he/she wishes to access and submit it. The app will display the lyrics if it is available from the external api, if the lyrics are not available, it will tell the user that the lyric submitted are not available.
  
-3, GitHub Page
+#  GitHub Page
 https://felix3ondullah.github.io/Phase-1-Project/
  
-4.  Technology Used
+#  Technology Used
 This app will use CSS/HTML/ and Javascript. CSS will be used for styling the app. HTML will be used for structuring it while Javascript will be used for the interactivity aspect in the app. Moreover, Javascript will be used to request to the server and load the information which will be the lyrics on our app. This request will be done using lyrics.ovh API that returns the data of the format JSON.
  
- 
-5.. MIT License
+#  MIT License
  
 Copyright (c) [2022] [Okoth Ondullah Felix]
  
@@ -34,7 +33,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
  
-6. Author
+#  Author
 Okoth Ondullah Felix
  
 
