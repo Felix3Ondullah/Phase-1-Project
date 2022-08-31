@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    font-family: fantasy;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 p{
@@ -25,9 +25,42 @@ p{
 
 .search-box{
     padding: 40px;
-    display: 
+    display: flex;
+    flex-direction: column;
+    background:lightgray ;
+    box-shadow: 0 5px 20px;
+    border-radius: 15px;
+    position:relative;
+    opacity: 0.5;;
+    
 }
 
+form input {
+    padding: 15px;
+    border: 5;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    min-width: 300px; 
+
+}
+
+.btn{
+    background-color: aqua;
+    border: none;
+    color: black;
+    padding: 7px 22px;
+    display: inline-block;
+    font-size: 15px;
+    text-transform: uppercase;
+    min-height: 45px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 5;
+}
+
+.btn hover{
+    background-color: blue;
+}
 
 
 
