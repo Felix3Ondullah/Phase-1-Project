@@ -11,6 +11,7 @@ p{
     margin-bottom: 30px;
     font-size: large;
     font-style: italic;
+    font-weight: bolder;
 }
 
 .container {
@@ -32,7 +33,9 @@ p{
     box-shadow: 0 5px 20px;
     border-radius: 15px;
     position:relative;
-    opacity: 0.5;;
+    opacity: 0.5;
+
+    
     
 }
 
@@ -42,6 +45,7 @@ form input {
     margin-bottom: 30px;
     border-radius: 10px;
     min-width: 300px; 
+    
 
 }
 
@@ -69,13 +73,17 @@ form input {
 
 
 
-
-
-
 .btn:hover{
     background-color: whitesmoke;
 }
 
+section .container{
+    display: block;
+    margin-right: o auto;
+    color: black;
+    background-color: aqua;
+
+}
 
 
 

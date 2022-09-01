@@ -3,7 +3,7 @@
 Lyrics app
  
 # Project Description
-This lyrics app will enable the user to fetch/find any song lyrics at his convenience by either using a phone/laptop. The user will input either the name of the musician/the song or the lyrics he/she wishes to access and submit it. The app will display the lyrics if it is available from the external api, if the lyrics are not available, it will tell the user that the lyric submitted are not available.
+This lyrics app will enable the user to fetch/find any song lyrics at his convenience by either using a phone/laptop. The user will input either the name of the musician/the song or the lyrics he/she wishes to access and submit it.
  
 #  GitHub Page
 https://felix3ondullah.github.io/Phase-1-Project/
