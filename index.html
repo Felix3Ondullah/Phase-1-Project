@@ -1,28 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lyrics App</title>
-    <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-    <div class="container">
-        <video autoplay loop muted plays-inline class="bg-video">
-            <source src="../Phase-1-Project/assets/Pexels Videos 1793534.mp4"
-            type="video/mp4">
-        </video>
-        <div class="search-box">
-            <p>Search Lyrics Here:</p>
-            <form id="form">
-                <input type="search"
-                id="search"
-                placeholder="Enter Artist Name/Lyrics......">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>song lyrics</title>
+  </head>
+  <body>
+    <video autoplay loop muted plays-inline class="bg-video">
+        <source src="../Phase-1-Project/assets/Pexels Videos 1793534.mp4"
+        type="video/mp4">
+    </video>
+    <header>
+        
+      <h1>Get your lyrics</h1>
 
-            <button class="btn"> Search </button>
-        </div>
-    <section class="result diplay" id="result"> Display Lyrics here......</section>
+      <form id="form">
+        <input
+          type="text"
+          id="search"
+          placeholder="Enter artist/Song Name..."
+        />
+        <button>Search</button>
+      </form>
+    </header>
+
+    <div class="container" id="result" >
+        <p> lyrics search results will be displayed here</p>
     </div>
-</body>
+    <div id="more" class="container centered"></div>
+    
+  </body>
 </html>
