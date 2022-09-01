@@ -52,6 +52,7 @@ form input {
     padding: 7px 22px;
     display: inline-block;
     font-size: 15px;
+    font-weight: bolder;
     text-transform: uppercase;
     min-height: 45px;
     cursor: pointer;
@@ -60,8 +61,19 @@ form input {
     border-color: aqua;
 }
 
-.btn hover{
-    background-color: black;
+#result{
+    padding-top: 30px;
+    color: black;
+    font-weight: bold;
+}
+
+
+
+
+
+
+.btn:hover{
+    background-color: whitesmoke;
 }
 
 
