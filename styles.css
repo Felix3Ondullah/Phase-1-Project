@@ -1,57 +1,157 @@
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-*:focus{
-    outline:none;
+  box-sizing: border-box;
 }
 
-body{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+*::after {
+margin:0;
+padding: 0;
+box-sizing: inherit;
+
 }
 
-h1{
-    margin-bottom: 30px;
-    font-size: large;
+*::before{
+  margin:0;
+padding: 0;
+box-sizing: inherit;
+
+}
+
+body {
+  background-image: url(../Phaseixabay-159480.jpg);
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    min-height: 100vh;
-    max-width: 700px;
-    
-    }
+  margin: 0 auto;
+  
+} 
 
-    .box{
-        padding: 40px;
-        display: flex;
-        flex-direction: column;
-    }
-
-
-
-
-
-.bg-video{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
+::placeholder {
+  color: gold;
+  font-style: italic;
+  font-size: larger;
 }
-@media (min-aspect-ratio: 16/9){
-    .bg-video{
-        width: 100%;
-        height: auto;
-    }
+
+.intro-text {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 20px;
+  color: gold
 }
-@media (max-aspect-ratio: 16/9){
-    .bg-video{
-        width: auto;
-        height: 100%;
-    }
+
+h1 {
+  text-align: center;
+  padding: 20px;
 }
+
+h2 {
+  text-align: center;
+  padding: 20px;
+} 
+
+
+#lyrics-search {
+  text-align: center;
+  align-items: center;
+  margin:  20px;
+  padding: 20px 20px;
+  border-radius: 5px;
+  position: relative;
+  
+}
+
+form {
+  margin: 0 auto;
+  padding: 15px;
+
+  
+}
+.btn{
+  background-color: gold;
+  border: none;
+  color: black;
+  padding: 10px 10px;
+  display: inline-block;
+  font-size: 15px;
+  text-transform: uppercase;
+  cursor: pointer;
+  
+}
+
+.btn:hover{
+  background-color: goldenrod;
+}
+
+#lyricSearch {
+  background-color: transparent;
+  color: darkgrey;
+  border: none;
+  outline: none;
+  height: 30px;
+  width: 60%;
+  margin: 0 auto;
+  padding-right: 2rem;
+  font-size: 16px;
+  font-family: cursive;
+  outline-style: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom:1px solid #eeeeee;
+}
+
+.lyrics {
+  width: 70%;
+  list-style: none;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.lyrics li {
+  font-size: 1.4rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0;
+  border-bottom: 1px solid  gold;
+}
+
+.lyrics li span {
+  font-size: 1.4rem;
+  padding: 5px;
+  margin: 5px;
+  cursor: pointer;
+  
+  
+}
+
+.lyrics li span:hover {
+  background-color: lightyellow;
+}
+
+
+#copy-lyrics {
+  padding: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  outline: none;
+  border-radius: 3px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background-color: gold;
+  color: white;
+}
+
+#lyrics-display {
+  color: white;
+  font-size: 1.4rem;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0;
+}
+
+
