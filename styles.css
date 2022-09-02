@@ -17,7 +17,7 @@ box-sizing: inherit;
 }
 
 body {
-  background-image: url(../Phaseixabay-159480.jpg);
+  
 }
 
 .container {
@@ -97,6 +97,26 @@ form {
   border-right: none;
   border-bottom:1px solid #eeeeee;
 }
+
+.back-video{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+@media (min-aspect-ratio: 16/9){
+  .back-video{
+      width: 100%;
+      height: auto;
+  }
+}
+@media (max-aspect-ratio: 16/9){
+  .back-video{
+      width: auto;
+      height: 100%;
+  }
+}
+
 
 .lyrics {
   width: 70%;
