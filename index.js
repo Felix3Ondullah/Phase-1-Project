@@ -9,7 +9,6 @@ const apiURL = "https://api.genuis.com";
 form.addEventListener("submit",e => {
 	e.preventDefault();
 	let searchValue = search.value.trim();
-
 	if(!searchValue) {
 		alert("You have not entered artist/Song Name");
 	} else {
@@ -26,7 +25,7 @@ async function getResult(searchValue) {
 		optimizeQuery: true,
 	     }
 	});
-	console.log(searchResult);
+	//console.log(searchResult);
 	const links= await searchResult.json();
     // console.log(links);
 	 showData(links);
