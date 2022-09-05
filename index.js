@@ -1,15 +1,17 @@
+
 //defining variables
 const form = document.getElementById("searchMe");
 const search = document.getElementById("lyricSearch");
 const result = document.getElementById("search-result");
 
-const apiURL = "https://api.genuis.com";
+//const apiURL = "https://api.genuis.com";
+// Text-Processing API Url
+const API_URL = 'https://genius.p.rapidapi.com/';
 
-
-form.addEventListener("submit",e => {
+form.addEventListener("submit", e => {
 	e.preventDefault();
 	let searchValue = search.value.trim();
-	if(!searchValue) {
+	if (!searchValue) {
 		alert("You have not entered artist/Song Name");
 	} else {
 		getResult(searchValue);
@@ -18,59 +20,84 @@ form.addEventListener("submit",e => {
 
 
 async function getResult(searchValue) {
-	const searchResult = await fetch (`${apiURL}/search?${searchValue}`,{
-		method: "GET",
-		headers: {"Content-type": "application/json;charset=UTF-8",
-		access_token:"DztkgnZeCR7cMEsrNuoanleMmDav4D5e9PjcgXjsUOV2oApDlHLsUzdxx2nPXVhYwWfhQcTI0EJ-FfLG21-efA",
-		optimizeQuery: true,
-	     }
+
+	const options = {
+		method: 'GET',
+		url: 'https://genius.p.rapidapi.com/search',
+		params: { q: searchValue },
+		headers: {
+			'X-RapidAPI-Key': 'edf121352dmsh89c48baae7c2ce8p1ee422jsn942eb83a2998',
+			'X-RapidAPI-Host': 'genius.p.rapidapi.com'
+		}
+	};
+
+	axios.request(options).then(function (response) {
+		//console.log(response.data.response.hits);
+		showData(response.data.response.hits)
+	}).catch(function (error) {
+		console.error(error);
 	});
-	//console.log(searchResult);
-	const links= await searchResult.json();
-    // console.log(links);
-	 showData(links);
+
 }
 
 function showData(links) {
 	result.innerHTML = `
 	<ul class="lyrics">
-	    ${links.data
-         .map(song=> `<li>
-                          <span class="attribute" song-title = "${song.title_short}"
-                           song-artist = "${song.artist.name}"><strong>${song.title_short}</strong>-${song.artist.name}</span>
+	    ${links.map(song => `<li>
+                          
+						        <strong><span class="attribute" 
+								song-title = ${song.result.title}
+								song-artist = ${song.result.artist_names}>${song.result.full_title}</span></strong>
+						   
                         </li>`
-         	)
-         .join("")
-	  }
+	)
+			.join("")
+		}
 	</ul>
 	`;
 }
 
-result.addEventListener("click",e => {
+result.addEventListener("click", e => {
 	const clickedButton = e.target;
-
-	if(clickedButton.className === 'attribute') {
+	if (clickedButton.className === 'attribute') {
 		const artist = clickedButton.getAttribute('song-artist');
 		const songTitle = clickedButton.getAttribute('song-title');
 
-		getLyrics(artist , songTitle);
-	} 
+		getLyrics(artist, songTitle);
+	}
 })
 
 async function getLyrics(artist, songTitle) {
-	const res = await fetch(`${apiURL}/v1/${artist}/${songTitle}`);
-	const data = await res.json();
-  
-	if (data.error) {
-	  result.innerHTML = data.error;
-	} else {
-	  const lyrics = data.lyrics.replace(/(\r\n|\r|\n)/g, "<br>");
-  
-	  result.innerHTML = `
+	console.log(songTitle)
+	const options = {
+		method: 'POST',
+		url: 'https://lyrics-search.p.rapidapi.com/search/lyrics',
+		headers: {
+			'content-type': 'application/json',
+			'X-RapidAPI-Key': 'edf121352dmsh89c48baae7c2ce8p1ee422jsn942eb83a2998',
+			'X-RapidAPI-Host': 'lyrics-search.p.rapidapi.com'
+		},
+		data: `{"searchTerm": "${songTitle}"}`
+	};
+
+	axios.request(options).then(function (response) {
+		console.log(response.data);
+		const data = response.data
+		const lyrics = data.lyrics.replace(/(\r\n|\r|\n)/g, "<br>");
+		if (data.title === "N/A") {
+			result.innerHTML = "The api does not have the lyrics for this song";
+		}
+		result.innerHTML = `
 				<h2><strong>${artist}</strong> - ${songTitle}</h2>
 				<span>${lyrics}</span>
 			`;
-}
+	}).catch(function (error) {
+		result.innerHTML = error;
+	});
+
+
+
+
 
 
 }
