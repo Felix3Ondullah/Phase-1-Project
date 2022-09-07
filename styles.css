@@ -13,7 +13,6 @@ box-sizing: inherit;
   margin:0;
 padding: 0;
 box-sizing: inherit;
-
 }
 
 .header{
@@ -24,23 +23,16 @@ box-sizing: inherit;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding: 20px;
   color: yellow;
-  
 
 }
 
-body {
-  
-}
 
 .container {
   margin: 0 auto;
   background-image: url(../Phase-1-Project/assets/pexels-ashutosh-sonwani-1762578.jpg);
-
-  
 } 
 
 ::placeholder {
-  color: gold;
   font-style: italic;
   font-size: larger;
 }
@@ -64,7 +56,6 @@ h2 {
   padding: 20px 20px;
   border-radius: 5px;
   position: relative;
-  
 }
 
 form {
@@ -74,9 +65,9 @@ form {
   
 }
 .btn{
-  background-color: gold;
+  background-color: black;
   border: none;
-  color: black;
+  color: whitesmoke;
   padding: 7px ;
   display: inline-block;
   font-size: 15px;
@@ -86,8 +77,8 @@ form {
 }
 
 .btn:hover{
-  background-color: black;
-  color: yellow;
+  background-color: whitesmoke;
+  color: black;
 }
 
 #lyricSearch {
@@ -106,6 +97,7 @@ form {
   border-left: none;
   border-right: black;
   border-bottom:1px solid black;
+
 }
 
 
@@ -124,7 +116,7 @@ form {
   justify-content: center;
   align-items: center;
   padding: 5px 0;
-  border-bottom: 1px solid  gold;
+  border-bottom: 1px solid  whitesmoke;
 }
 
 .lyrics li span {
@@ -137,10 +129,8 @@ form {
 }
 
 .lyrics li span:hover {
-  background-color: yellow;
+  background-color: whitesmoke;
 }
-
-
 
 #lyrics-display {
   color: white;
