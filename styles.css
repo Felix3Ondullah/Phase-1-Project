@@ -13,23 +13,30 @@ box-sizing: inherit;
   margin:0;
 padding: 0;
 box-sizing: inherit;
+
 }
 
 .header{
-  background-image: url(../Phase-1-Project/assets/disk.jpg);
+  background-image: url(../Phase-1-Project/assets/pexels-ashutosh-sonwani-1762578.jpg);
   background-attachment: fixed;
   background-position: center;
   padding: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding: 20px;
   color: yellow;
+  
 
 }
 
+body {
+  
+}
 
 .container {
   margin: 0 auto;
-  background-image: url(../Phase-1-Project/assets/pexels-pixabay-248510.jpg);
+  background-image: url(../Phase-1-Project/assets/pexels-ashutosh-sonwani-1762578.jpg);
+
+  
 } 
 
 ::placeholder {
@@ -85,7 +92,7 @@ form {
 
 #lyricSearch {
   background-color: transparent;
-  color: darkgrey;
+  color: black;
   border: none;
   outline: none;
   height: 30px;
@@ -132,6 +139,8 @@ form {
 .lyrics li span:hover {
   background-color: yellow;
 }
+
+
 
 #lyrics-display {
   color: white;
