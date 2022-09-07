@@ -13,7 +13,6 @@ box-sizing: inherit;
   margin:0;
 padding: 0;
 box-sizing: inherit;
-
 }
 
 .header{
@@ -24,19 +23,13 @@ box-sizing: inherit;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding: 20px;
   color: yellow;
-  
 
 }
 
-body {
-  
-}
 
 .container {
   margin: 0 auto;
   background-image: url(../Phase-1-Project/assets/pexels-pixabay-248510.jpg);
-
-  
 } 
 
 ::placeholder {
@@ -140,8 +133,6 @@ form {
   background-color: yellow;
 }
 
-
-
 #lyrics-display {
   color: white;
   font-size: 1.4rem;
@@ -150,7 +141,9 @@ form {
   justify-content: center;
   align-items: center;
   padding: 5px 0;
+  background-image: url();
 }
+
 #lyricsHead {
   color: white;}
 
