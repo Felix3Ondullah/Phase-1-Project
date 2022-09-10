@@ -10,7 +10,7 @@ This lyrics app will enable the user to fetch/find any song lyrics at his conven
 
 This app will use CSS/HTML/ and Javascript. CSS will be used for styling the app. HTML will be used for structuring it while Javascript will be used for the interactivity aspect in the app. Moreover, Javascript will be used to request to the server and load the information which will be the lyrics on our app. This request will be done using genuis API to fetch artiste/song title and then go ahead and fecth lyrics of those songs using lyrics api from rapid api. This will return the data of the format JSON.
 
-# GitHub Page live link
+# Project live link
 
 https://felix3ondullah.github.io/Phase-1-Project/
 
